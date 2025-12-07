@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>XSS Command Detector</title>
+        <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="brand">XSS command detector</div>
+    </nav>
+
+    <main class="container">
+        <section class="card">
+            <form id="commandForm" autocomplete="off">
+                <label for="commandInput" class="label">Enter command</label>
+                <input id="commandInput" name="command" class="input" type="text" placeholder="Type a command..." aria-describedby="helpText" />
+                <div id="helpText" class="help">Checks: alert, script, javascript, onload, onerror</div>
+                <button id="submitBtn" class="btn" type="submit">Check</button>
+            </form>
+
+            <div id="result" class="result" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
